@@ -1,8 +1,6 @@
-import Button from 'react-bootstrap/Button'
-import Container from 'react-bootstrap/Container'
-import Nav from 'react-bootstrap/Nav'
-import Navbar from 'react-bootstrap/Navbar'
-import { NavLink, useLocation } from 'react-router-dom'
+import React from 'react';
+import { Button, Container, Nav, Navbar } from 'react-bootstrap';
+import { NavLink, useLocation } from 'react-router-dom';
 
 const navigations = [
   {
@@ -21,12 +19,12 @@ const navigations = [
     path: '/about',
     title: 'About'
   }
-]
+];
 
 function NavbarComponent() {
-  const location = useLocation()
-  const isActive = (path) => path === location.pathname
-  console.log(navigations.map((nav) => isActive(nav.path)))
+  const location = useLocation();
+  const isActive = (path) => path === location.pathname;
+  console.log(navigations.map((nav) => isActive(nav.path)));
 
   return (
     <Navbar bg="transparent" expand="md">
@@ -37,21 +35,21 @@ function NavbarComponent() {
         <Navbar.Toggle aria-controls="navbar" />
         <Navbar.Collapse id="navbar">
           <Nav className="mx-auto my-2 my-md-0 gap-5" style={{ maxHeight: '100px' }}>
-            {navigations.map((nav, index) => {
-              return (
-                <NavLink key={index} to={nav.path} className="nav-link">{nav.title}</NavLink>
-              )
-            })}
+            {navigations.map((nav, index) => (
+              <NavLink key={index} to={nav.path} className="nav-link">
+                {nav.title}
+              </NavLink>
+            ))}
           </Nav>
-          <Nav>
+          <div>
             <Button variant="secondary" size="sm" className="rounded-pill px-5 py-2">
               Sign In
             </Button>
-          </Nav>
+          </div>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  )
+  );
 }
 
-export default NavbarComponent
+export default NavbarComponent;

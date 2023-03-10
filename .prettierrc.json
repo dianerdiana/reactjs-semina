@@ -1,7 +1,9 @@
 {
   "trailingComma": "none",
-  "semi": false,
+  "semi": true,
   "tabWidth": 2,
   "singleQuote": true,
-  "printWidth": 90
+  "printWidth": 90,
+  "endOfLine": "cr",
+  "import": "only"
 }
