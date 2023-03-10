@@ -1,11 +1,11 @@
 // ** React Imports
-import React from 'react';
+import React from 'react'
 
 // ** Custom Components
-import Navbar from './Navbar';
+import Navbar from './Navbar'
 
 const Layout = () => {
-  return <Navbar />;
-};
+  return <Navbar />
+}
 
-export default Layout;
+export default Layout

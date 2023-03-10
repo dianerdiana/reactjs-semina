@@ -1,6 +1,12 @@
-import React from 'react';
-import { Button, Container, Nav, Navbar } from 'react-bootstrap';
-import { NavLink, useLocation } from 'react-router-dom';
+// ** React Import
+import React, { useState } from 'react'
+
+// ** Bootstrap Import
+import { Button, Container, Nav, Navbar } from 'react-bootstrap'
+
+// ** Third Party Components
+import { NavLink, Link, useLocation } from 'react-router-dom'
+import { Menu } from 'react-feather'
 
 const navigations = [
   {
@@ -19,37 +25,74 @@ const navigations = [
     path: '/about',
     title: 'About'
   }
-];
+]
 
-function NavbarComponent() {
-  const location = useLocation();
-  const isActive = (path) => path === location.pathname;
-  console.log(navigations.map((nav) => isActive(nav.path)));
+function CollapsibleExample() {
+  // ** Hooks
+  const location = useLocation()
+
+  // ** State
+  const [expanded, setExpanded] = useState(false)
+  const [bg, setBg] = useState('transparent') // set initial background color
+
+  // ** Vars
+  const isActive = (path) => path === location.pathname
+
+  // ** Handle when hamburger button toggler
+  const handleToggle = (isExpanded) => {
+    setExpanded(isExpanded)
+    setTimeout(() => {
+      if (isExpanded) {
+        // if Navbar is expanded, set the background color based on the expand breakpoint
+        setBg(expanded ? 'transparent' : 'secondary')
+      } else {
+        // if Navbar is collapsed, set the background color to the initial value
+        setBg('transparent')
+      }
+    }, !isExpanded && 500)
+  }
 
   return (
-    <Navbar bg="transparent" expand="md">
+    <Navbar
+      collapseOnSelect
+      expand={expanded ? 'false' : 'md'}
+      bg={bg}
+      variant="dark"
+      onToggle={handleToggle}
+    >
       <Container>
-        <Navbar.Brand href="#" className="me-auto text-white">
+        <Navbar.Brand as={Link} to="/" className="text-white">
           セミナー
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="navbar" />
-        <Navbar.Collapse id="navbar">
-          <Nav className="mx-auto my-2 my-md-0 gap-5" style={{ maxHeight: '100px' }}>
-            {navigations.map((nav, index) => (
-              <NavLink key={index} to={nav.path} className="nav-link">
-                {nav.title}
-              </NavLink>
-            ))}
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{ color: 'white' }}>
+          <Menu color="white" />
+        </Navbar.Toggle>
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="mx-auto gap-md-5">
+            {navigations.map((nav, index) => {
+              return (
+                <NavLink
+                  to={nav.path}
+                  key={index}
+                  className={isActive(nav.path) ? 'nav-link active' : 'nav-link'}
+                >
+                  {nav.title}
+                </NavLink>
+              )
+            })}
           </Nav>
-          <div>
-            <Button variant="secondary" size="sm" className="rounded-pill px-5 py-2">
+          <Nav>
+            <Button
+              variant={expanded ? 'dark' : 'secondary'}
+              className="px-5 py-2 rounded-pill shadow-none"
+            >
               Sign In
             </Button>
-          </div>
+          </Nav>
         </Navbar.Collapse>
       </Container>
     </Navbar>
-  );
+  )
 }
 
-export default NavbarComponent;
+export default CollapsibleExample

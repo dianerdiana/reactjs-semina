@@ -2,7 +2,7 @@
 
 #root {
   min-height: 100vh;
-  background: #151a26;
+  background: $dark;
 }
 
 .navbar {
@@ -35,4 +35,9 @@
       background: $success;
     }
   }
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  background: $success;
 }
