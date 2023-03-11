@@ -5,6 +5,8 @@
   background: $dark;
 }
 
+$text-gray: #a3a5aa;
+
 .navbar {
   .nav-link {
     text-decoration: none;
@@ -40,4 +42,49 @@
 .navbar-toggler:focus {
   box-shadow: none;
   background: $success;
+}
+
+.footer-group {
+  list-style-type: none;
+  padding: 0;
+
+  .footer-link {
+    text-decoration: none;
+    position: relative;
+    color: #a3a5aa;
+    font-weight: 200;
+
+    &.head {
+      color: $white;
+      font-weight: 500;
+    }
+
+    &.active,
+    &:hover {
+      color: $white;
+    }
+    &:after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0;
+      background: transparent;
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      transition: width 0.3s ease, background-color 0.3s ease;
+    }
+    &:hover:after {
+      width: 100%;
+      background: $white;
+    }
+    &.active:after {
+      width: 100%;
+      background: $white;
+    }
+  }
+}
+
+.text-gray {
+  color: #a3a5aa;
 }

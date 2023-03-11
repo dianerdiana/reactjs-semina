@@ -7,6 +7,7 @@ import { Button, Container, Nav, Navbar } from 'react-bootstrap'
 // ** Third Party Components
 import { NavLink, Link, useLocation } from 'react-router-dom'
 import { Menu } from 'react-feather'
+import themeConfig from '../configs/themeConfig'
 
 const navigations = [
   {
@@ -62,7 +63,7 @@ function CollapsibleExample() {
     >
       <Container>
         <Navbar.Brand as={Link} to="/" className="text-white">
-          セミナー
+          {themeConfig.app.appLogoImage}
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" style={{ color: 'white' }}>
           <Menu color="white" />

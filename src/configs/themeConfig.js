@@ -3,9 +3,9 @@
 //Template config options
 const themeConfig = {
   app: {
-    appName: 'Erdiana',
-    appLogoImage: require('../assets/images/logo/dierd.svg').default
+    appName: 'セミナー',
+    appLogoImage: 'セミナー'
   }
-};
+}
 
-export default themeConfig;
+export default themeConfig

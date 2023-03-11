@@ -2,10 +2,16 @@
 import React from 'react'
 
 // ** Custom Components
-import Navbar from './Navbar'
+import NavbarComponent from './Navbar'
+import FooterComponent from './Footer'
 
 const Layout = () => {
-  return <Navbar />
+  return (
+    <>
+      <NavbarComponent />
+      <FooterComponent />
+    </>
+  )
 }
 
 export default Layout
