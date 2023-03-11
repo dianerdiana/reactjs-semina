@@ -27,13 +27,15 @@ const ListGroup = ({ list }) => {
 }
 
 const FooterComponent = () => {
+  const year = new Date().getFullYear()
+
   return (
     <Card className="rounded-0 border-0" bg="dark">
       <Card.Body>
         <Container>
-          <Col className="mb-4">
+          <div className="mb-4">
             <span className="fs-4 text-white">{themeConfig.app.appLogoImage}</span>
-          </Col>
+          </div>
           <Row>
             <Col sm="12" lg="4">
               <p className="text-gray">
@@ -46,6 +48,11 @@ const FooterComponent = () => {
             <ListGroup list={learn} />
             <Col lg="2" className="d-xs-none"></Col>
           </Row>
+          <div className="text-center py-6">
+            <span className="text-gray">
+              All Rights Reserved. Semina Dian Erdiana {year}.
+            </span>
+          </div>
         </Container>
       </Card.Body>
     </Card>

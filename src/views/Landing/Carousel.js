@@ -1,62 +1,44 @@
 // ** Third Party Components
-import { Swiper, SwiperSlide } from 'swiper/react/swiper-react'
+import Slider from 'react-slick'
 import { Button, Card } from 'react-bootstrap'
 
-const Carousel = ({ isRtl }) => {
-  const slides = []
-  for (let i = 0; i < 10; i += 1) {
-    slides.push(<SwiperSlide key={`slide-${i + 1}`}>Slide {i + 1}</SwiperSlide>)
-  }
+// import '~slick-carousel/slick/slick.css'
+// import '~slick-carousel/slick/slick-theme.css'
 
-  let instance = null
-
-  const appendSlide = () => {
-    if (instance !== null) {
-      slides.push(
-        <SwiperSlide key={`slide-${slides.length + 1}`}>
-          Slide {slides.length + 1}
-        </SwiperSlide>
-      )
-      instance.update(true)
-    }
-  }
-
-  const removeSlide = () => {
-    if (instance !== null) {
-      instance.removeAllSlides()
-      slides.length = 0
-    }
+const Carousel = () => {
+  const settings = {
+    className: 'center',
+    centerMode: true,
+    infinite: true,
+    centerPadding: '60px',
+    slidesToShow: 3,
+    speed: 500
   }
 
   return (
-    <Card>
-      <Card.Header>
-        <Card.Title tag="h4">Virtual</Card.Title>
-      </Card.Header>
-      <Card.Body>
-        <Swiper
-          dir={isRtl ? 'rtl' : 'ltr'}
-          className="swiper-virtual"
-          spaceBetween={50}
-          slidesPerView={3}
-          centeredSlides
-          pagination={{ clickable: true }}
-          onSwiper={(swiper) => (instance = swiper.virtual)}
-          virtual
-        >
-          {slides}
-        </Swiper>
-
-        <div className="demo-inline-spacing">
-          <Button color="primary" outline onClick={appendSlide}>
-            Append Slide
-          </Button>
-          <Button className="me-0" color="primary" outline onClick={removeSlide}>
-            Remove All Slides
-          </Button>
+    <div>
+      <h2>Center Mode</h2>
+      <Slider {...settings}>
+        <div>
+          <h3>1</h3>
         </div>
-      </Card.Body>
-    </Card>
+        <div>
+          <h3>2</h3>
+        </div>
+        <div>
+          <h3>3</h3>
+        </div>
+        <div>
+          <h3>4</h3>
+        </div>
+        <div>
+          <h3>5</h3>
+        </div>
+        <div>
+          <h3>6</h3>
+        </div>
+      </Slider>
+    </div>
   )
 }
 

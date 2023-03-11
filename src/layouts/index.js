@@ -5,10 +5,13 @@ import React from 'react'
 import NavbarComponent from './Navbar'
 import FooterComponent from './Footer'
 
+import { Outlet } from 'react-router-dom'
+
 const Layout = () => {
   return (
     <>
       <NavbarComponent />
+      <Outlet />
       <FooterComponent />
     </>
   )

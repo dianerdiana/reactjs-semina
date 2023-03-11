@@ -12,6 +12,13 @@
   font-weight: bold;
 }
 
+@font-face {
+  font-family: 'Poppins';
+  src: url('../../fonts/poppins/Poppins-SemiBold.ttf');
+  font-style: normal;
+  font-weight: 500;
+}
+
 $font-family-sans-serif: 'Poppins', sans-serif;
 $secondary: #252837;
 $success: #01fb34;
