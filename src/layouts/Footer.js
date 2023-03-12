@@ -1,7 +1,7 @@
 import React from 'react'
 
 // ** Third Party Components
-import { Card, Col, Container, Row } from 'react-bootstrap'
+import { Col, Container, Row } from 'react-bootstrap'
 import { Link } from 'react-router-dom'
 
 import themeConfig from '../configs/themeConfig'
@@ -72,7 +72,7 @@ const FooterComponent = ({ auth, hidden }) => {
           <Row className="justify-content-center pb-6">
             {companies.map((comp, index) => {
               return (
-                <Col xs="3" sm="2" key={index}>
+                <Col xs="3" sm="2" key={index} className="mb-3">
                   <img
                     src={comp.icon}
                     alt={comp.name}

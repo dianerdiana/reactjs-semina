@@ -4,44 +4,28 @@ import React from 'react'
 // ** Bootstrap Import
 import { Button, Card, Col, Form, Row } from 'react-bootstrap'
 
-const index = () => {
+const Login = () => {
   return (
-    <Row className="justify-content-center auth-page mb-8">
-      <Col md="6" className="py-md-8 mb-3 mb-lg-0">
-        <h3 className="hero-title mt-md-8">Expand Your Knowledge & Skills</h3>
-        <p className="text-gray">
-          Kami menyediakan berbagai acara terbaik untuk membantu{' '}
-          <br className="d-none d-lg-inline" /> anda dalam meningkatkan skills di bidang
-          teknologi
-        </p>
-      </Col>
+    <Row className="justify-content-center my-8">
+      <h1 className="text-center text-white mb-8">Sign In</h1>
       <Col md="5">
         <Card bg="white" className="px-1 py-3">
           <Card.Body>
             <Form>
               <Form.Group className="mb-3">
-                <Form.Label>First Name</Form.Label>
-                <Form.Control className="shadow-none" size="lg" />
-              </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Label>Last Name</Form.Label>
-                <Form.Control className="shadow-none" size="lg" />
-              </Form.Group>
-              <Form.Group className="mb-3">
                 <Form.Label>Email Address</Form.Label>
                 <Form.Control className="shadow-none" size="lg" />
               </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Label>Password (6 characters)</Form.Label>
+              <Form.Group className="mb-5">
+                <Form.Label>Password</Form.Label>
                 <Form.Control className="shadow-none" size="lg" />
               </Form.Group>
-              <Form.Group className="mb-3">
-                <Form.Label>Role</Form.Label>
-                <Form.Control className="shadow-none" size="lg" />
-              </Form.Group>
-              <Form.Group className="d-grid">
+              <Form.Group className="d-grid gap-3">
                 <Button variant="success" className="rounded-pill py-7 fw-bold text-dark">
-                  Sign Up
+                  Sign In
+                </Button>
+                <Button variant="dark" className="rounded-pill py-7 fw-bold text-white">
+                  Create New Account
                 </Button>
               </Form.Group>
             </Form>
@@ -52,4 +36,4 @@ const index = () => {
   )
 }
 
-export default index
+export default Login
