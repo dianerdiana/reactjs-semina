@@ -69,7 +69,7 @@ const FooterComponent = ({ auth, hidden }) => {
               Events held by top & biggest global companies
             </span>
           </div>
-          <Row className="justify-content-center">
+          <Row className="justify-content-center pb-6">
             {companies.map((comp, index) => {
               return (
                 <Col xs="3" sm="2" key={index}>

@@ -103,6 +103,10 @@ $text-gray: #a3a5aa;
   width: 88px;
 }
 
+.auth-page {
+  margin-top: 30px;
+}
+
 @include media-breakpoint-up(sm) {
   .hero-title {
     font-size: 1.5rem;
@@ -115,6 +119,9 @@ $text-gray: #a3a5aa;
   .text-joining {
     width: 88px;
   }
+  .auth-page {
+    margin-top: 90px;
+  }
 }
 @include media-breakpoint-up(md) {
   .hero-title {
@@ -125,9 +132,11 @@ $text-gray: #a3a5aa;
   .text-knowledge {
     width: 196px;
   }
-
   .text-joining {
     width: 116px;
+  }
+  .auth-page {
+    margin-top: 105px;
   }
 }
 @include media-breakpoint-up(lg) {
@@ -139,9 +148,11 @@ $text-gray: #a3a5aa;
   .text-knowledge {
     width: 256px;
   }
-
   .text-joining {
     width: 167px;
+  }
+  .auth-page {
+    margin-top: 148px;
   }
 }
 @include media-breakpoint-up(xl) {

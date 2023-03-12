@@ -5,13 +5,17 @@ import React from 'react'
 import NavbarComponent from './Navbar'
 import FooterComponent from './Footer'
 
+// ** Third Party Component
+import { Container } from 'react-bootstrap'
 import { Outlet } from 'react-router-dom'
 
 const Layout = ({ auth, hidden }) => {
   return (
     <>
       <NavbarComponent />
-      <Outlet />
+      <Container>
+        <Outlet />
+      </Container>
       <FooterComponent auth={auth} hidden={hidden} />
     </>
   )
