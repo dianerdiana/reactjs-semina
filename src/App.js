@@ -1,6 +1,7 @@
 import React from 'react'
 import Layout from './layouts'
 import Landing from './views/Landing'
+import Login from './views/Authentication/Login'
 
 import { createBrowserRouter } from 'react-router-dom'
 
@@ -15,8 +16,14 @@ const router = createBrowserRouter([
     ]
   },
   {
-    path: '/browse',
-    element: <div>Browse</div>
+    path: '/login',
+    element: <Layout auth={true} />,
+    children: [
+      {
+        path: '/login',
+        element: <Login />
+      }
+    ]
   },
   {
     path: '/stories',

@@ -7,12 +7,12 @@ import FooterComponent from './Footer'
 
 import { Outlet } from 'react-router-dom'
 
-const Layout = () => {
+const Layout = ({ auth, hidden }) => {
   return (
     <>
       <NavbarComponent />
       <Outlet />
-      <FooterComponent />
+      <FooterComponent auth={auth} hidden={hidden} />
     </>
   )
 }

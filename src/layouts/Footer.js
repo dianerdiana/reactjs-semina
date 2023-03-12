@@ -8,6 +8,13 @@ import themeConfig from '../configs/themeConfig'
 
 import { company, features, learn } from './utils'
 
+// ** Impoert Images
+import apple from '../assets/images/logo/companies/apple.svg'
+import adobe from '../assets/images/logo/companies/adobe.svg'
+import slack from '../assets/images/logo/companies/slack.svg'
+import spotify from '../assets/images/logo/companies/spotify.svg'
+import google from '../assets/images/logo/companies/google.svg'
+
 const ListGroup = ({ list }) => {
   return (
     <Col sm="4" lg="2">
@@ -26,13 +33,58 @@ const ListGroup = ({ list }) => {
   )
 }
 
-const FooterComponent = () => {
+const FooterComponent = ({ auth, hidden }) => {
   const year = new Date().getFullYear()
+  const companies = [
+    {
+      name: 'Apple',
+      icon: apple
+    },
+    {
+      name: 'Adobe',
+      icon: adobe
+    },
+    {
+      name: 'Slack',
+      icon: slack
+    },
+    {
+      name: 'Spotify',
+      icon: spotify
+    },
+    {
+      name: 'Google',
+      icon: google
+    }
+  ]
+
+  if (hidden) return
 
   return (
-    <Card className="rounded-0 border-0" bg="dark">
-      <Card.Body>
-        <Container>
+    <Container>
+      {auth ? (
+        <>
+          <div className="text-center py-6">
+            <span className="text-gray">
+              Events held by top & biggest global companies
+            </span>
+          </div>
+          <Row className="justify-content-center">
+            {companies.map((comp, index) => {
+              return (
+                <Col xs="3" sm="2" key={index}>
+                  <img
+                    src={comp.icon}
+                    alt={comp.name}
+                    className="img-thumbnail bg-transparent border-0"
+                  />
+                </Col>
+              )
+            })}
+          </Row>
+        </>
+      ) : (
+        <>
           <div className="mb-4">
             <span className="fs-4 text-white">{themeConfig.app.appLogoImage}</span>
           </div>
@@ -53,9 +105,9 @@ const FooterComponent = () => {
               All Rights Reserved. Semina Dian Erdiana {year}.
             </span>
           </div>
-        </Container>
-      </Card.Body>
-    </Card>
+        </>
+      )}
+    </Container>
   )
 }
 
