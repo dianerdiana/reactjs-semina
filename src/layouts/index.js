@@ -7,16 +7,21 @@ import FooterComponent from './Footer'
 
 // ** Third Party Component
 import { Container } from 'react-bootstrap'
-import { Outlet } from 'react-router-dom'
+import { Outlet, useLocation } from 'react-router-dom'
 
-const Layout = ({ auth, hidden }) => {
+const Layout = () => {
+  // ** Hooks
+  const location = useLocation()
+  const isRegister = location.pathname === '/register'
+  const hidden = location.pathname === '/login'
+
   return (
     <>
       <NavbarComponent />
       <Container>
         <Outlet />
       </Container>
-      <FooterComponent auth={auth} hidden={hidden} />
+      <FooterComponent auth={isRegister} hidden={hidden} />
     </>
   )
 }
