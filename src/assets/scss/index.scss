@@ -85,6 +85,10 @@ $text-gray: #a3a5aa;
   }
 }
 
+#dropdown-user::after {
+  display: none;
+}
+
 .text-gray {
   color: #a3a5aa;
 }
@@ -103,10 +107,6 @@ $text-gray: #a3a5aa;
   width: 88px;
 }
 
-.auth-page {
-  margin-top: 30px;
-}
-
 @include media-breakpoint-up(sm) {
   .hero-title {
     font-size: 1.5rem;
@@ -118,9 +118,6 @@ $text-gray: #a3a5aa;
   }
   .text-joining {
     width: 88px;
-  }
-  .auth-page {
-    margin-top: 90px;
   }
 }
 @include media-breakpoint-up(md) {
@@ -135,9 +132,6 @@ $text-gray: #a3a5aa;
   .text-joining {
     width: 116px;
   }
-  .auth-page {
-    margin-top: 105px;
-  }
 }
 @include media-breakpoint-up(lg) {
   .hero-title {
@@ -150,9 +144,6 @@ $text-gray: #a3a5aa;
   }
   .text-joining {
     width: 167px;
-  }
-  .auth-page {
-    margin-top: 148px;
   }
 }
 @include media-breakpoint-up(xl) {

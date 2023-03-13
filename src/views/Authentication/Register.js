@@ -35,7 +35,7 @@ const Register = () => {
                 <Form.Label>Password (6 characters)</Form.Label>
                 <Form.Control className="shadow-none" size="lg" />
               </Form.Group>
-              <Form.Group className="mb-3">
+              <Form.Group className="mb-5">
                 <Form.Label>Role</Form.Label>
                 <Form.Control className="shadow-none" size="lg" />
               </Form.Group>

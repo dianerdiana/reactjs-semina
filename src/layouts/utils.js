@@ -69,3 +69,22 @@ export const learn = [
     path: '/learn/tools'
   }
 ]
+
+export const navigations = [
+  {
+    path: '/',
+    title: 'Home'
+  },
+  {
+    path: '/browse',
+    title: 'Browse'
+  },
+  {
+    path: '/stories',
+    title: 'Stories'
+  },
+  {
+    path: '/about',
+    title: 'About'
+  }
+]
