@@ -51,9 +51,22 @@ $spacers: (
 // Input
 $input-focus-border-color: $success;
 $input-border-color: $dark;
+$input-border-radius: 14px;
 $input-border-radius-lg: 14px;
 $input-font-size-lg: 1rem;
 $input-padding-y-lg: 0.75rem;
 
 // Card
 $card-border-radius: 24px;
+
+// Form
+$form-check-input-width: 1.5em;
+$component-active-color: $success;
+$component-active-bg: transparent;
+$form-check-input-bg: transparent;
+$form-check-input-border: 1px solid white;
+$form-check-input-checked-bg-color: transparent;
+$form-check-input-checked-color: $success;
+$form-check-input-checked-border-color: white;
+
+$form-check-inline-margin-end: 0.5rem;

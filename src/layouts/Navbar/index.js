@@ -52,6 +52,7 @@ const NavbarComponent = () => {
       bg={bg}
       variant="dark"
       onToggle={handleToggle}
+      className="py-4"
     >
       <Container>
         <Navbar.Brand as={Link} to="/" className="text-white">

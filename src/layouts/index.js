@@ -13,7 +13,7 @@ const Layout = () => {
   // ** Hooks
   const location = useLocation()
   const isRegister = location.pathname === '/register'
-  const hidden = location.pathname === '/login'
+  const hidden = location.pathname === '/login' || location.pathname === '/checkout'
 
   return (
     <>

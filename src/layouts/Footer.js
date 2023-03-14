@@ -18,11 +18,11 @@ import google from '../assets/images/logo/companies/google.svg'
 const ListGroup = ({ list }) => {
   return (
     <Col sm="4" lg="2">
-      <ul className="footer-group">
+      <ul className="list-group">
         {list.map((li, index) => {
           return (
             <li key={index} className={li.head ? 'mb-3' : 'mb-2'}>
-              <Link to={li.path} className={li.head ? 'footer-link head' : 'footer-link'}>
+              <Link to={li.path} className={li.head ? 'list-link head' : 'list-link'}>
                 {li.title}
               </Link>
             </li>
