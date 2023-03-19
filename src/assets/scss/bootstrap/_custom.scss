@@ -69,4 +69,7 @@ $form-check-input-checked-bg-color: transparent;
 $form-check-input-checked-color: $success;
 $form-check-input-checked-border-color: white;
 
+$form-check-label-cursorL: pointer;
+$form-check-radio-checked-bg-image: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='-3 -3 6 6'><circle r='2' fill='#{$form-check-input-checked-color}'/></svg>");
+
 $form-check-inline-margin-end: 0.5rem;
