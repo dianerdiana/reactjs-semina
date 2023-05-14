@@ -10,13 +10,14 @@ import classnames from 'classnames'
 import Select from 'react-select'
 
 // ** Image
-import Shield from '../../assets/images/icons/shield-check.png'
+import Shield from 'assets/images/icons/shield-check.png'
 
 // ** Custom Component
 import PaymentCard from './PaymentCard'
 
 // ** Styles
-import { selectStyles, selectThemeColors } from '../../utility/utils'
+import { selectStyles, selectThemeColors } from 'utility/utils'
+
 const styles = {
   label: 'text-white',
   input: 'shadow-none border-input bg-transparent text-white'

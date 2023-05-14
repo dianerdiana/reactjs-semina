@@ -6,9 +6,9 @@ import { Col, Row } from 'react-bootstrap'
 import { MapPin, Clock, Calendar } from 'react-feather'
 
 // ** Utils
-import imgCheckout from '../../assets/images/checkout.png'
+import imgCheckout from 'assets/images/checkout.png'
 
-import { isLoggedInUser } from '../../utility/utils'
+import { isLoggedInUser } from 'utility/utils'
 import GuestForm from './GuestForm'
 import UserForm from './UserForm'
 

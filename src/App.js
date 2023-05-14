@@ -3,10 +3,10 @@ import React from 'react'
 
 // ** Custom Component
 import Layout from './layouts'
-import Landing from './views/Landing'
-import Login from './views/Authentication/Login'
-import Register from './views/Authentication/Register'
-import Checkout from './views/Checkout'
+import Home from './views/home'
+import Login from './views/authentication/Login'
+import Register from './views/authentication/Register'
+import Checkout from './views/browse/checkout'
 
 import { createBrowserRouter } from 'react-router-dom'
 
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
       {
         path: '/',
         index: true,
-        element: <Landing />
+        element: <Home />
       },
       {
         path: '/checkout',

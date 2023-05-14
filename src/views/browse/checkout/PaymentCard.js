@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from 'react'
 
 // ** Utils
-import mastercard from '../../assets/images/logo/bank/mastercard.svg'
-import sewallet from '../../assets/images/logo/bank/sewallet.svg'
+import mastercard from 'assets/images/logo/bank/mastercard.svg'
+import sewallet from 'assets/images/logo/bank/sewallet.svg'
 
 // ** Third Party
 import { Card, Col, Form, Row } from 'react-bootstrap'

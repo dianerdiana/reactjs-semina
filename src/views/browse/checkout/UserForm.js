@@ -6,7 +6,7 @@ import { Form, Row, Button } from 'react-bootstrap'
 import { useForm } from 'react-hook-form'
 
 // ** Image
-import Shield from '../../assets/images/icons/shield-check.png'
+import Shield from 'assets/images/icons/shield-check.png'
 
 // ** Custom Component
 import PaymentCard from './PaymentCard'
