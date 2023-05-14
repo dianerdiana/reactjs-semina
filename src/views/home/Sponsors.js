@@ -4,7 +4,7 @@ import React from 'react'
 // ** RB
 import { Container } from 'react-bootstrap'
 
-const CompaniesLogo = () => {
+const Sponsors = () => {
   return (
     <section className="companies-logo-wrapper">
       <Container>
@@ -14,4 +14,4 @@ const CompaniesLogo = () => {
   )
 }
 
-export default CompaniesLogo
+export default Sponsors

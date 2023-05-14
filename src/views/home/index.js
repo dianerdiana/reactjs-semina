@@ -6,7 +6,7 @@ import { Container } from 'react-bootstrap'
 // ** Components
 import Carousel from './Carousel'
 import HeroText from './HeroText'
-import CompaniesLogo from './CompaniesLogo'
+import Sponsors from './Sponsors'
 import FeaturedEvents from './FeaturedEvents'
 
 const Home = () => {
@@ -16,7 +16,7 @@ const Home = () => {
         <HeroText />
         <Carousel />
       </Container>
-      <CompaniesLogo />
+      <Sponsors />
       <FeaturedEvents />
     </>
   )

@@ -3,6 +3,9 @@ import React from 'react'
 // ** RB
 import { Card, Container, Row, Col } from 'react-bootstrap'
 
+// ** Thirdparty
+import { Link } from 'react-router-dom'
+
 // ** Images
 import image_1 from 'assets/images/events/image-1.jpg'
 import image_2 from 'assets/images/events/image-2.jpg'
@@ -66,23 +69,30 @@ const FeaturedEvents = () => {
           {events.map((event) => {
             return (
               <Col key={event.id} sm="6" md="6" lg="3" className="mb-4">
-                <Card className="rounded rounded-4 shadow border-0">
-                  <img
-                    src={event.img}
-                    alt={event.title}
-                    className="img-fluid"
-                    style={{
-                      borderRadius: '1rem 1rem 0 0'
-                    }}
-                  />
-                  <Card.Body>
-                    <h6>{event.title}</h6>
-                    <p className="text-gray fs-7">{event.category}</p>
-                    <p className="fs-7">
-                      {event.place}, {formatDate(event.date)}
-                    </p>
-                  </Card.Body>
-                </Card>
+                <Link to="#" className="text-decoration-none">
+                  <Card className="rounded rounded-4 shadow border-0 position-relative">
+                    <img
+                      src={event.img}
+                      alt={event.title}
+                      className="img-fluid"
+                      style={{
+                        borderRadius: '1rem 1rem 0 0'
+                      }}
+                    />
+                    <div className="position-absolute top-0 end-0 p-3">
+                      <span className="bg-black text-success rounded-pill fs-7 px-2 py-1">
+                        {event.price != 0 ? `$${event.price}` : 'FREE'}
+                      </span>
+                    </div>
+                    <Card.Body>
+                      <h6 className="text-secondary">{event.title}</h6>
+                      <p className="text-gray fs-7">{event.category}</p>
+                      <p className="text-secondary fs-7">
+                        {event.place}, {formatDate(event.date)}
+                      </p>
+                    </Card.Body>
+                  </Card>
+                </Link>
               </Col>
             )
           })}
