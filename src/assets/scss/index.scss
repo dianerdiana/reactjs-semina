@@ -161,6 +161,12 @@ input[type='radio'] {
   }
 }
 
+.img-carousel {
+  width: 250px;
+  height: 280px;
+  object-fit: cover;
+}
+
 @include media-breakpoint-up(sm) {
   .hero-title {
     font-size: 1.5rem;
@@ -172,6 +178,12 @@ input[type='radio'] {
   }
   .text-joining {
     width: 88px;
+  }
+
+  .img-carousel {
+    width: 250px;
+    height: 280px;
+    object-fit: cover;
   }
 }
 
@@ -187,6 +199,10 @@ input[type='radio'] {
   .text-joining {
     width: 116px;
   }
+  .img-carousel {
+    width: 524px;
+    height: 280px;
+  }
 }
 @include media-breakpoint-up(lg) {
   .hero-title {
@@ -199,6 +215,10 @@ input[type='radio'] {
   }
   .text-joining {
     width: 167px;
+  }
+  .img-carousel {
+    width: 824px;
+    height: 520px;
   }
 }
 @include media-breakpoint-up(xl) {
