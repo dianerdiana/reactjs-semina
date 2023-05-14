@@ -1,7 +1,7 @@
 import React from 'react'
 
 // ** RB
-import { Row, Col } from 'react-bootstrap'
+import { Row, Col, Button } from 'react-bootstrap'
 
 // ** Text
 import knowledge from '../../assets/images/text/knowledge.png'
@@ -25,6 +25,14 @@ const HeroText = () => {
           <br className="d-none d-md-inline" />
           anda dalam meningkatkan skills di bidang teknologi
         </span>
+        <div className="mt-6">
+          <Button
+            variant="success"
+            className="rounded-pill shadow-success fw-bold px-6 py-7"
+          >
+            Browse now
+          </Button>
+        </div>
       </Col>
     </Row>
   )
