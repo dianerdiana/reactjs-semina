@@ -81,14 +81,14 @@ const Testimony = () => {
           </Col>
 
           {/* Testimony Text */}
-          <Col lg="5" className="align-self-center text-center text-md-start">
+          <Col lg="6" className="align-self-center text-center text-md-start ps-lg-6">
             <h5 className="text-pink">Story</h5>
-            <h2>
+            <h2 className="mb-6">
               One Great Event.
               <br></br>
               For The Better World.
             </h2>
-            <p className="text-gray">
+            <p className="text-gray mb-5">
               Baca kisah bagaimana Shayna berhasil membangun sebuah Startup yang membantu
               warga untuk mendapatkan bantuan selama pandemic.
             </p>
