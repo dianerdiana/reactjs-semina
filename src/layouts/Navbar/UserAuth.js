@@ -7,7 +7,7 @@ import classnames from 'classnames'
 // ** Utils
 import imgProfile from '../../assets/images/profile-default.png'
 
-const UserAuth = ({ user, expanded, isLoginPage }) => {
+const UserAuth = ({ user, expanded, isLoginPage, toggleMenu }) => {
   if (isLoginPage) return
   if (user) {
     return (
@@ -29,7 +29,7 @@ const UserAuth = ({ user, expanded, isLoginPage }) => {
           </Dropdown.Toggle>
 
           <Dropdown.Menu align="end" variant="dark">
-            <Dropdown.Item as={Link} to="/login">
+            <Dropdown.Item as={Link} to="/login" onClick={expanded ? toggleMenu : ''}>
               <Power size={16} className="me-1" /> Logout
             </Dropdown.Item>
           </Dropdown.Menu>
@@ -45,6 +45,7 @@ const UserAuth = ({ user, expanded, isLoginPage }) => {
         'btn-secondary': !expanded
       })}
       to="/login"
+      onClick={expanded ? toggleMenu : ''}
     >
       Sign In
     </Link>

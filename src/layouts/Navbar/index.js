@@ -1,5 +1,5 @@
 // ** React Import
-import React, { useState } from 'react'
+import React, { useRef, useState } from 'react'
 
 // ** Bootstrap Import
 import { Container, Nav, Navbar } from 'react-bootstrap'
@@ -22,6 +22,7 @@ const NavbarComponent = () => {
   // ** Hooks
   const location = useLocation()
   const user = getUserData()
+  const navRef = useRef()
 
   // ** Vars
   const isActive = (path) => path === location.pathname
@@ -45,6 +46,10 @@ const NavbarComponent = () => {
     }, !isExpanded && 500)
   }
 
+  const toggleMenu = () => {
+    navRef.current.click()
+  }
+
   return (
     <Navbar
       collapseOnSelect
@@ -58,15 +63,25 @@ const NavbarComponent = () => {
         <Navbar.Brand as={Link} to="/" className="text-white">
           {themeConfig.app.appLogoImage}
         </Navbar.Brand>
-        <Navbar.Toggle aria-controls="responsive-navbar-nav text-white">
+        <Navbar.Toggle ref={navRef} aria-controls="responsive-navbar-nav text-white">
           <NavbarToggle user={user} />
         </Navbar.Toggle>
         <Navbar.Collapse id="responsive-navbar-nav">
           <Nav className={classnames('gap-md-5', isLoginPage ? 'ms-auto' : 'mx-auto')}>
-            <MenuLink menu={navigations} isActive={isActive} />
+            <MenuLink
+              menu={navigations}
+              expanded={expanded}
+              isActive={isActive}
+              toggleMenu={toggleMenu}
+            />
           </Nav>
           <Nav>
-            <UserAuth user={user} expanded={expanded} isLoginPage={isLoginPage} />
+            <UserAuth
+              user={user}
+              expanded={expanded}
+              isLoginPage={isLoginPage}
+              toggleMenu={toggleMenu}
+            />
           </Nav>
         </Navbar.Collapse>
       </Container>
