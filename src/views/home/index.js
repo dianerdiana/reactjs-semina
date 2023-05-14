@@ -6,6 +6,7 @@ import { Container } from 'react-bootstrap'
 // ** Components
 import Carousel from './Carousel'
 import HeroText from './HeroText'
+import CompaniesLogo from './CompaniesLogo'
 
 const Home = () => {
   return (
@@ -14,14 +15,7 @@ const Home = () => {
         <HeroText />
         <Carousel />
       </Container>
-      <div
-        style={{
-          width: '100%',
-          height: '240px',
-          background: 'white',
-          marginTop: '-275px'
-        }}
-      ></div>
+      <CompaniesLogo />
     </>
   )
 }

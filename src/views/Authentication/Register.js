@@ -6,7 +6,7 @@ import { Button, Card, Col, Form, Row } from 'react-bootstrap'
 
 const Register = () => {
   return (
-    <Row className="justify-content-center my-8">
+    <Row className="justify-content-center mx-0 my-8">
       <Col md="6" className="py-md-8 mb-3 mb-lg-0">
         <h3 className="hero-title mt-md-8">Expand Your Knowledge & Skills</h3>
         <p className="text-gray">

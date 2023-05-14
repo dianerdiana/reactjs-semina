@@ -23,7 +23,7 @@ const CarouselComponent = () => {
   ]
 
   return (
-    <Carousel interval={5000} variant="dark" className="text-center">
+    <Carousel interval={5000} variant="light" className="text-center">
       {data.map((crs) => {
         return (
           <Carousel.Item key={crs.id}>

@@ -6,7 +6,7 @@ import { Button, Card, Col, Form, Row } from 'react-bootstrap'
 
 const Login = () => {
   return (
-    <Row className="justify-content-center py-8">
+    <Row className="justify-content-center mx-0 py-8">
       <h1 className="text-center text-white mb-8">Sign In</h1>
       <Col md="5">
         <Card bg="white" className="px-1 py-3">
