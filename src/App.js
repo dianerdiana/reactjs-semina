@@ -20,7 +20,7 @@ const router = createBrowserRouter([
         element: <Landing />
       },
       {
-        path: 'checkout',
+        path: '/checkout',
         element: <Checkout />
       },
       {

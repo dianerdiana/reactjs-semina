@@ -1,44 +1,42 @@
 // ** Third Party Components
 import Slider from 'react-slick'
 import { Button, Card } from 'react-bootstrap'
-
-// import '~slick-carousel/slick/slick.css'
-// import '~slick-carousel/slick/slick-theme.css'
+import 'slick-carousel/slick/slick.css'
+import 'slick-carousel/slick/slick-theme.css'
 
 const Carousel = () => {
-  const settings = {
-    className: 'center',
-    centerMode: true,
-    infinite: true,
-    centerPadding: '60px',
-    slidesToShow: 3,
-    speed: 500
-  }
-
   return (
-    <div>
-      <h2>Center Mode</h2>
-      <Slider {...settings}>
-        <div>
-          <h3>1</h3>
+    <>
+      <div className="slideshow-container">
+        <div className="mySlides fade">
+          <div className="numbertext">1 / 3</div>
+          <img src="img1.jpg" />
+          <div className="text">Caption Text</div>
         </div>
-        <div>
-          <h3>2</h3>
+
+        <div className="mySlides fade">
+          <div className="numbertext">2 / 3</div>
+          <img src="img2.jpg" />
+          <div className="text">Caption Two</div>
         </div>
-        <div>
-          <h3>3</h3>
+
+        <div className="mySlides fade">
+          <div className="numbertext">3 / 3</div>
+          <img src="img3.jpg" />
+          <div className="text">Caption Three</div>
         </div>
-        <div>
-          <h3>4</h3>
-        </div>
-        <div>
-          <h3>5</h3>
-        </div>
-        <div>
-          <h3>6</h3>
-        </div>
-      </Slider>
-    </div>
+
+        <a className="prev">&#10094;</a>
+        <a className="next">&#10095;</a>
+      </div>
+      <br />
+
+      <div className="text-center">
+        <span className="dot" onclick="currentSlide(1)"></span>
+        <span className="dot" onclick="currentSlide(2)"></span>
+        <span className="dot" onclick="currentSlide(3)"></span>
+      </div>
+    </>
   )
 }
 
