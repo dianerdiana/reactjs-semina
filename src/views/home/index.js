@@ -8,6 +8,7 @@ import Carousel from './Carousel'
 import HeroText from './HeroText'
 import Sponsors from './Sponsors'
 import FeaturedEvents from './FeaturedEvents'
+import Testimony from './Testimony'
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       </Container>
       <Sponsors />
       <FeaturedEvents />
+      <Testimony />
     </>
   )
 }

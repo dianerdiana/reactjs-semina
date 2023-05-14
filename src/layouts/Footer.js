@@ -35,7 +35,7 @@ const FooterComponent = ({ auth, hidden }) => {
   if (hidden) return
 
   return (
-    <Container>
+    <Container className="py-8">
       {auth ? (
         <Sponsor />
       ) : (

@@ -27,6 +27,20 @@ $space-companies-wrapper: 240px;
   margin-top: -$space-companies-wrapper + 120px;
 }
 
+.img-testimony {
+  width: 424px;
+  height: 550px;
+  max-width: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.card-event-testimony {
+  position: absolute;
+  bottom: -50px;
+  left: 120px;
+}
+
 @include media-breakpoint-up(sm) {
   .hero-title {
     font-size: 1.5rem;
@@ -48,6 +62,11 @@ $space-companies-wrapper: 240px;
   .companies-logo-wrapper {
     padding-top: $space-companies-wrapper - 120px;
     margin-top: -$space-companies-wrapper + 120px;
+  }
+  .card-event-testimony {
+    position: absolute;
+    bottom: -50px;
+    left: 120px;
   }
 }
 
@@ -71,6 +90,11 @@ $space-companies-wrapper: 240px;
     padding-top: $space-companies-wrapper - 120px;
     margin-top: -$space-companies-wrapper + 120px;
   }
+  .card-event-testimony {
+    position: absolute;
+    bottom: -50px;
+    left: 120px;
+  }
 }
 
 @include media-breakpoint-up(lg) {
@@ -92,5 +116,9 @@ $space-companies-wrapper: 240px;
   .companies-logo-wrapper {
     padding-top: $space-companies-wrapper;
     margin-top: -$space-companies-wrapper;
+  }
+  .card-event-testimony {
+    position: absolute;
+    left: 0;
   }
 }
