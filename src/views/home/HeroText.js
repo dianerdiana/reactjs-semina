@@ -30,7 +30,7 @@ const HeroText = () => {
             variant="success"
             className="rounded-pill shadow-success fw-bold px-6 py-7"
           >
-            Browse now
+            Browse Now
           </Button>
         </div>
       </Col>

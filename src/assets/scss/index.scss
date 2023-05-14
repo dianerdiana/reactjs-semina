@@ -15,6 +15,14 @@
   color: #a3a5aa;
 }
 
+.text-pink {
+  background: linear-gradient(92.21deg, #f32fb8 3.94%, #fdd7be 110.01%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 .bg-gray {
   background: #a3a5aa;
 }
@@ -32,4 +40,8 @@
   -webkit-box-shadow: 8px 8px 18px -8px rgb(1, 251, 51);
   -moz-box-shadow: 8px 8px 18px -8px rgb(1, 251, 51);
   box-shadow: 8px 8px 18px -8px rgb(1, 251, 51);
+}
+
+.fs-7 {
+  font-size: 0.875rem;
 }
