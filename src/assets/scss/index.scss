@@ -1,108 +1,14 @@
 @import './bootstrap/index.scss';
+@import './components/index.scss';
+@import './pages/index.scss';
 
 #root {
   min-height: 100vh;
   background: $dark;
 }
 
-$text-gray: #a3a5aa;
-
-.navbar {
-  .nav-link {
-    text-decoration: none;
-    position: relative;
-    color: #a3a5aa;
-
-    &.active,
-    &:hover {
-      color: $white;
-    }
-    &:after {
-      content: '';
-      display: block;
-      height: 3px;
-      width: 0;
-      background: transparent;
-      position: absolute;
-      bottom: 2px;
-      left: 0;
-      transition: width 0.3s ease, background-color 0.3s ease;
-    }
-    &:hover:after {
-      width: 100%;
-      background: $success;
-    }
-    &.active:after {
-      width: 100%;
-      background: $success;
-    }
-  }
-}
-
-.navbar-toggler:focus {
-  box-shadow: none;
-  background: $success;
-}
-
-.list-group {
-  list-style-type: none;
-  padding: 0;
-
-  .list-link {
-    text-decoration: none;
-    position: relative;
-    color: #a3a5aa;
-    font-weight: 200;
-
-    &.head {
-      color: $white;
-      font-weight: 500;
-    }
-
-    &.active,
-    &:hover {
-      color: $white;
-    }
-    &:after {
-      content: '';
-      display: block;
-      height: 2px;
-      width: 0;
-      background: transparent;
-      position: absolute;
-      bottom: 0px;
-      left: 0;
-      transition: width 0.3s ease, background-color 0.3s ease;
-    }
-    &:hover:after {
-      width: 100%;
-      background: $white;
-    }
-    &.active:after {
-      width: 100%;
-      background: $white;
-    }
-  }
-
-  .list-link-nl {
-    text-decoration: none;
-    position: relative;
-    color: #a3a5aa;
-    font-weight: 200;
-
-    &.head {
-      color: $white;
-      font-weight: 500;
-    }
-  }
-}
-
 .db-underline {
   border-bottom: 4px double;
-}
-
-#dropdown-user::after {
-  display: none;
 }
 
 .text-gray {
@@ -113,34 +19,8 @@ $text-gray: #a3a5aa;
   background: #a3a5aa;
 }
 
-.hero-title {
-  font-size: 1.5rem;
-  font-weight: 500;
-  color: $white;
-}
-
-.text-knowledge {
-  width: 138px;
-}
-
-.text-joining {
-  width: 88px;
-}
-
 .img-checkout {
   border-radius: 30px;
-}
-
-input.border-input {
-  border: 1px solid $white;
-
-  &:focus {
-    border-color: $success;
-  }
-}
-
-input[type='radio'] {
-  cursor: pointer;
 }
 
 .card-payment-method {
@@ -152,76 +32,4 @@ input[type='radio'] {
   -webkit-box-shadow: 8px 8px 18px -8px rgb(1, 251, 51);
   -moz-box-shadow: 8px 8px 18px -8px rgb(1, 251, 51);
   box-shadow: 8px 8px 18px -8px rgb(1, 251, 51);
-}
-
-// InValid Select
-.react-select.is-invalid {
-  .select__control {
-    border-color: $danger;
-  }
-}
-
-.img-carousel {
-  width: 250px;
-  height: 280px;
-  object-fit: cover;
-}
-
-@include media-breakpoint-up(sm) {
-  .hero-title {
-    font-size: 1.5rem;
-    font-weight: 500;
-    color: $white;
-  }
-  .text-knowledge {
-    width: 158px;
-  }
-  .text-joining {
-    width: 88px;
-  }
-
-  .img-carousel {
-    width: 250px;
-    height: 280px;
-    object-fit: cover;
-  }
-}
-
-@include media-breakpoint-up(md) {
-  .hero-title {
-    font-size: 2rem;
-    font-weight: 500;
-    color: $white;
-  }
-  .text-knowledge {
-    width: 196px;
-  }
-  .text-joining {
-    width: 116px;
-  }
-  .img-carousel {
-    width: 524px;
-    height: 280px;
-  }
-}
-@include media-breakpoint-up(lg) {
-  .hero-title {
-    font-size: 3rem;
-    font-weight: 500;
-    color: $white;
-  }
-  .text-knowledge {
-    width: 256px;
-  }
-  .text-joining {
-    width: 167px;
-  }
-  .img-carousel {
-    width: 824px;
-    height: 520px;
-  }
-}
-@include media-breakpoint-up(xl) {
-}
-@include media-breakpoint-up(xxl) {
 }

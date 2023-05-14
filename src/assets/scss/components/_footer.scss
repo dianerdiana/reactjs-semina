@@ -1,0 +1,52 @@
+.list-group {
+  list-style-type: none;
+  padding: 0;
+
+  .list-link {
+    text-decoration: none;
+    position: relative;
+    color: #a3a5aa;
+    font-weight: 200;
+
+    &.head {
+      color: $white;
+      font-weight: 500;
+    }
+
+    &.active,
+    &:hover {
+      color: $white;
+    }
+    &:after {
+      content: '';
+      display: block;
+      height: 2px;
+      width: 0;
+      background: transparent;
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      transition: width 0.3s ease, background-color 0.3s ease;
+    }
+    &:hover:after {
+      width: 100%;
+      background: $white;
+    }
+    &.active:after {
+      width: 100%;
+      background: $white;
+    }
+  }
+
+  .list-link-nl {
+    text-decoration: none;
+    position: relative;
+    color: #a3a5aa;
+    font-weight: 200;
+
+    &.head {
+      color: $white;
+      font-weight: 500;
+    }
+  }
+}

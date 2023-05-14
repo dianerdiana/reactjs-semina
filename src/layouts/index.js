@@ -18,9 +18,7 @@ const Layout = () => {
   return (
     <>
       <NavbarComponent />
-      <Container>
-        <Outlet />
-      </Container>
+      <Outlet />
       <FooterComponent auth={isRegister} hidden={hidden} />
     </>
   )

@@ -1,0 +1,40 @@
+.navbar {
+  .nav-link {
+    text-decoration: none;
+    position: relative;
+    color: #a3a5aa;
+
+    &.active,
+    &:hover {
+      color: $white;
+    }
+    &:after {
+      content: '';
+      display: block;
+      height: 3px;
+      width: 0;
+      background: transparent;
+      position: absolute;
+      bottom: 2px;
+      left: 0;
+      transition: width 0.3s ease, background-color 0.3s ease;
+    }
+    &:hover:after {
+      width: 100%;
+      background: $success;
+    }
+    &.active:after {
+      width: 100%;
+      background: $success;
+    }
+  }
+}
+
+.navbar-toggler:focus {
+  box-shadow: none;
+  background: $success;
+}
+
+#dropdown-user::after {
+  display: none;
+}

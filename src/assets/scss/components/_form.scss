@@ -1,0 +1,18 @@
+input.border-input {
+  border: 1px solid $white;
+
+  &:focus {
+    border-color: $success;
+  }
+}
+
+input[type='radio'] {
+  cursor: pointer;
+}
+
+// InValid Select
+.react-select.is-invalid {
+  .select__control {
+    border-color: $danger;
+  }
+}
