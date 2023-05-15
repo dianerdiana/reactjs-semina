@@ -7,6 +7,7 @@ import Home from './views/user/home'
 import Login from './views/user/authentication/Login'
 import Register from './views/user/authentication/Register'
 import Checkout from './views/user/browse/checkout'
+import Details from 'views/user/browse/details'
 
 import { Navigate, createBrowserRouter } from 'react-router-dom'
 
@@ -26,6 +27,10 @@ const router = createBrowserRouter([
       {
         path: '/checkout',
         element: <Checkout />
+      },
+      {
+        path: '/details',
+        element: <Details />
       },
       {
         path: '/login',

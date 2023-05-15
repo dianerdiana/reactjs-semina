@@ -12,7 +12,7 @@ import Testimony from './Testimony'
 
 const Home = () => {
   return (
-    <>
+    <main>
       <Container>
         <HeroText />
         <Carousel />
@@ -20,7 +20,7 @@ const Home = () => {
       <Sponsors />
       <FeaturedEvents />
       <Testimony />
-    </>
+    </main>
   )
 }
 
