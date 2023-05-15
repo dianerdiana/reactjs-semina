@@ -34,14 +34,18 @@ const Details = () => {
     price: '2,980',
     description: `
       Most realtors and investors are using Social Media (Facebook and Google)
-      <b>ineffectively because</b> they don't know what they're doing or to start.
+      ineffectively because they don't know what they're doing or to start.
+      <br>
       They spend hours and hours trying different things and getting nowhere.
+      <br>
       This makes them feel like giving up on marketing altogether.
-      <br></br>
-      <br></br>
+      <br><br>
       We are a group of professionals who have decided to help people making
-      travel experiences <b>whenever they want</b> and wherever they are.
+      <br>
+      travel experiences whenever they want and wherever they are.
+      <br>
       Our virtual tours have as their topic the beauties of the ancient world,
+      <br>
       such as Ancient Egypt or Ancient Rome, Art and History.
     `,
     keypoints: [
@@ -90,7 +94,7 @@ const Details = () => {
                   </Row>
                 </Container>
                 <h6 className="py-4 mb-0">Get Ticket</h6>
-                <span className="d-block mb-4">
+                <span className="d-block mb-2">
                   <span className="fs-1 fw-bold">${data.price}</span>
                   <span className="text-gray">/person</span>
                 </span>
@@ -124,7 +128,7 @@ const Details = () => {
                 </ListGroup>
                 <Button
                   variant="success"
-                  className="rounded-pill d-block w-100 fw-bold py-3"
+                  className="rounded-pill d-block w-100 fw-bold py-3 shadow-success"
                 >
                   Join Now
                 </Button>
@@ -133,6 +137,19 @@ const Details = () => {
           </Col>
         </Row>
       </Container>
+      <section className="bg-white" style={{ marginTop: '-300px' }}>
+        <Container as="section" className="p-8">
+          <Row className="bg-white">
+            <Col lg="8">
+              <h5 className="mb-3">Event Details</h5>
+              <p
+                dangerouslySetInnerHTML={{ __html: data.description }}
+                className="lh-lg"
+              />
+            </Col>
+          </Row>
+        </Container>
+      </section>
       <SimilarEvents />
       <Testimony />
     </main>
