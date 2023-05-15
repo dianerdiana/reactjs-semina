@@ -12,6 +12,9 @@ import image_2 from 'assets/images/events/image-2.jpg'
 import image_3 from 'assets/images/events/image-3.jpg'
 import image_4 from 'assets/images/events/image-4.jpg'
 
+// ** Utilities
+import { formatDate } from 'utility/utils'
+
 const FeaturedEvents = () => {
   const events = [
     {
@@ -51,14 +54,6 @@ const FeaturedEvents = () => {
       category: 'Product Design'
     }
   ]
-
-  const formatDate = (date) => {
-    const convert = new Date(date)
-    const options = { day: 'numeric', month: 'short', year: 'numeric' }
-    const formattedDate = convert.toLocaleDateString('en-GB', options)
-
-    return formattedDate
-  }
 
   return (
     <section className="bg-light">

@@ -46,3 +46,31 @@ export const selectStyles = {
     borderRadius: '14px'
   })
 }
+
+export const formatDate = (dateString) => {
+  const date = new Date(dateString)
+  const options = { day: 'numeric', month: 'short', year: 'numeric' }
+  const formattedDate = date.toLocaleDateString('en-GB', options)
+
+  return formattedDate
+}
+
+export const formatTime = (dateString) => {
+  // Create a new Date object from the input string
+  const date = new Date(dateString)
+
+  // Get the hours and minutes from the Date object
+  const hours = date.getHours()
+  const minutes = date.getMinutes()
+
+  // Determine if it is AM or PM
+  const amOrPm = hours >= 12 ? 'PM' : 'AM'
+
+  // Convert the hours to 12-hour format
+  const hours12 = hours % 12 || 12
+
+  // Create the final time string in HH:MM AM/PM format
+  const timeString = `${hours}:${String(minutes).padStart(2, '0')} ${amOrPm}`
+
+  return timeString
+}
