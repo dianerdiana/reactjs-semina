@@ -1,21 +1,25 @@
 // ** React Import
 import React from 'react'
 
-// ** Custom Component
+// ** Views
 import Layout from './layouts'
 import Home from './views/home'
 import Login from './views/authentication/Login'
 import Register from './views/authentication/Register'
 import Checkout from './views/browse/checkout'
 
-import { createBrowserRouter } from 'react-router-dom'
+import { Navigate, createBrowserRouter } from 'react-router-dom'
 
 const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Navigate to="/home" />
+  },
   {
     element: <Layout />,
     children: [
       {
-        path: '/',
+        path: '/home',
         index: true,
         element: <Home />
       },
@@ -32,6 +36,10 @@ const router = createBrowserRouter([
         element: <Register />
       }
     ]
+  },
+  {
+    path: '/browse',
+    element: <div>browse</div>
   },
   {
     path: '/stories',
