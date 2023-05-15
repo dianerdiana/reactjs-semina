@@ -4,8 +4,8 @@ import React from 'react'
 import { Row, Col, Button } from 'react-bootstrap'
 
 // ** Text
-import knowledge from '../../assets/images/text/knowledge.png'
-import joining from '../../assets/images/text/joining.png'
+import knowledge from 'assets/images/text/knowledge.png'
+import joining from 'assets/images/text/joining.png'
 
 const HeroText = () => {
   return (

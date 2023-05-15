@@ -72,7 +72,7 @@ export const learn = [
 
 export const navigations = [
   {
-    path: '/',
+    path: '/home',
     title: 'Home'
   },
   {

@@ -2,9 +2,9 @@
 import { Carousel } from 'react-bootstrap'
 
 // ** Images
-import image_1 from '../../assets/images/carousel/image-3.jpg'
-import image_2 from '../../assets/images/carousel/image-2.jpg'
-import image_3 from '../../assets/images/carousel/image-2.jpg'
+import image_1 from 'assets/images/carousel/image-3.jpg'
+import image_2 from 'assets/images/carousel/image-2.jpg'
+import image_3 from 'assets/images/carousel/image-2.jpg'
 
 const CarouselComponent = () => {
   const data = [

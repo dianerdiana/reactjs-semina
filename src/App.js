@@ -3,10 +3,10 @@ import React from 'react'
 
 // ** Views
 import Layout from './layouts'
-import Home from './views/home'
-import Login from './views/authentication/Login'
-import Register from './views/authentication/Register'
-import Checkout from './views/browse/checkout'
+import Home from './views/user/home'
+import Login from './views/user/authentication/Login'
+import Register from './views/user/authentication/Register'
+import Checkout from './views/user/browse/checkout'
 
 import { Navigate, createBrowserRouter } from 'react-router-dom'
 
