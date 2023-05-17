@@ -5,7 +5,7 @@ import { Dropdown } from 'react-bootstrap'
 import classnames from 'classnames'
 
 // ** Utils
-import imgProfile from '../../assets/images/profile-default.png'
+import imgProfile from 'assets/images/avatar/profile-default.png'
 
 const UserAuth = ({ user, expanded, isLoginPage, toggleMenu }) => {
   if (isLoginPage) return

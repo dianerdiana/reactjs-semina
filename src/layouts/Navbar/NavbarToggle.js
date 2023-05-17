@@ -1,5 +1,5 @@
 // ** Utils
-import imgProfile from '../../assets/images/profile-default.png'
+import imgProfile from 'assets/images/avatar/profile-default.png'
 import { Menu } from 'react-feather'
 
 const NavbarToggle = ({ user }) => {
