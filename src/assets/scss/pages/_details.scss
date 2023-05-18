@@ -1,0 +1,17 @@
+.section-description {
+  margin-top: -300px;
+  padding-top: 300px;
+}
+
+@include media-breakpoint-up(sm) {
+}
+
+@include media-breakpoint-up(md) {
+}
+
+@include media-breakpoint-up(lg) {
+  .section-description {
+    margin-top: -300px;
+    padding-top: 0;
+  }
+}
