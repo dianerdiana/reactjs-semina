@@ -6,7 +6,6 @@ import NavbarComponent from './Navbar'
 import FooterComponent from './Footer'
 
 // ** Third Party Component
-import { Container } from 'react-bootstrap'
 import { Outlet, useLocation } from 'react-router-dom'
 
 const Layout = () => {
@@ -16,11 +15,11 @@ const Layout = () => {
   const hidden = location.pathname === '/login' || location.pathname === '/checkout'
 
   return (
-    <>
+    <React.Fragment>
       <NavbarComponent />
       <Outlet />
       <FooterComponent auth={isRegister} hidden={hidden} />
-    </>
+    </React.Fragment>
   )
 }
 

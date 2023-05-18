@@ -9,8 +9,8 @@ import { Link, useLocation } from 'react-router-dom'
 import classnames from 'classnames'
 
 // ** Utils
-import themeConfig from '../../configs/themeConfig'
-import { getUserData } from '../../utility/utils'
+import themeConfig from 'configs/themeConfig'
+import { getUserData } from 'utility/utils'
 import { navigations } from '../utils'
 
 // ** Custom Component
