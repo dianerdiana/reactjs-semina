@@ -12,7 +12,7 @@ import { isLoggedInUser } from 'utility/utils'
 import GuestForm from './GuestForm'
 import UserForm from './UserForm'
 
-const CheckoutComponent = () => {
+const BrowseCheckout = () => {
   const isLogin = isLoggedInUser()
 
   return (
@@ -75,4 +75,4 @@ const CheckoutComponent = () => {
   )
 }
 
-export default CheckoutComponent
+export default BrowseCheckout

@@ -10,7 +10,7 @@ import EventDescription from './EventDescription'
 import details from 'assets/images/details/image-1.jpg'
 import avatar from 'assets/images/avatar/avatar-1.jpg'
 
-const Details = () => {
+const BrowseDetails = () => {
   const data = {
     title: 'Start Your Design Career With Design Sprint',
     img: details,
@@ -65,4 +65,4 @@ const Details = () => {
   )
 }
 
-export default Details
+export default BrowseDetails
