@@ -3,9 +3,6 @@ import React from 'react'
 // ** RB
 import { Container, Col, Row, Button } from 'react-bootstrap'
 
-// ** Map
-import { Map } from 'react-map-gl'
-
 // ** Styles
 import 'mapbox-gl/dist/mapbox-gl.css'
 
