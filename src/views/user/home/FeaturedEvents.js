@@ -76,7 +76,7 @@ const FeaturedEvents = () => {
                     />
                     <div className="position-absolute top-0 end-0 p-3">
                       <span className="bg-black text-success rounded-pill fs-7 px-2 py-1">
-                        {event.price !== 0 ? `$${event.price}` : 'FREE'}
+                        {parseInt(event.price) !== 0 ? `$${event.price}` : 'FREE'}
                       </span>
                     </div>
                     <Card.Body>

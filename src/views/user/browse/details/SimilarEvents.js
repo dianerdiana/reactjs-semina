@@ -64,7 +64,7 @@ const SimilarEvents = () => {
           {events.map((event) => {
             return (
               <Col key={event.id} sm="6" md="6" lg="3" className="mb-4">
-                <Link to="#" className="text-decoration-none">
+                <Link to={`/browse/details/${event.id}`} className="text-decoration-none">
                   <Card className="rounded rounded-4 shadow border-0 position-relative">
                     <img
                       src={event.img}
@@ -76,7 +76,7 @@ const SimilarEvents = () => {
                     />
                     <div className="position-absolute top-0 end-0 p-3">
                       <span className="bg-black text-success rounded-pill fs-7 px-2 py-1">
-                        {event.price !== 0 ? `$${event.price}` : 'FREE'}
+                        {parseInt(event.price) !== 0 ? `$${event.price}` : 'FREE'}
                       </span>
                     </div>
                     <Card.Body>
