@@ -1,13 +1,15 @@
 import React, { lazy, Suspense } from 'react'
-import ReactDOM from 'react-dom/client'
-import 'assets/scss/index.scss'
-import reportWebVitals from './reportWebVitals'
 
 // ** Router
+import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 
 // ** RB
 import { Spinner } from 'react-bootstrap'
+
+// ** Style
+import 'assets/scss/index.scss'
+import reportWebVitals from './reportWebVitals'
 
 // ** Lazy App
 const LazyApp = lazy(() => import('./App'))
