@@ -3,6 +3,7 @@ import React from 'react'
 
 // ** Bootstrap Import
 import { Button, Card, Col, Form, Row } from 'react-bootstrap'
+import { Link } from 'react-router-dom'
 
 const Login = () => {
   return (
@@ -21,10 +22,20 @@ const Login = () => {
                 <Form.Control className="shadow-none" size="lg" />
               </Form.Group>
               <Form.Group className="d-grid gap-3">
-                <Button variant="success" className="rounded-pill py-7 fw-bold text-dark">
+                <Button
+                  as={Link}
+                  to="/home"
+                  variant="success"
+                  className="rounded-pill py-7 fw-bold text-dark"
+                >
                   Sign In
                 </Button>
-                <Button variant="dark" className="rounded-pill py-7 fw-bold text-white">
+                <Button
+                  as={Link}
+                  to="/register"
+                  variant="dark"
+                  className="rounded-pill py-7 fw-bold text-white"
+                >
                   Create New Account
                 </Button>
               </Form.Group>

@@ -4,6 +4,9 @@ import React from 'react'
 // ** Bootstrap Import
 import { Button, Card, Col, Form, Row } from 'react-bootstrap'
 
+// Router DOM
+import { Link } from 'react-router-dom'
+
 const Register = () => {
   return (
     <Row className="justify-content-center mx-0 my-8">
@@ -40,7 +43,12 @@ const Register = () => {
                 <Form.Control className="shadow-none" size="lg" />
               </Form.Group>
               <Form.Group className="d-grid">
-                <Button variant="success" className="rounded-pill py-7 fw-bold text-dark">
+                <Button
+                  as={Link}
+                  to="/home"
+                  variant="success"
+                  className="rounded-pill py-7 fw-bold text-dark"
+                >
                   Sign Up
                 </Button>
               </Form.Group>
